@@ -19,6 +19,8 @@ namespace HttpFunction
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
+            var password = "lkajdkjkjejkjz";
+
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
