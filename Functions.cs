@@ -5,13 +5,13 @@ using Microsoft.Extensions.Logging;
 
 namespace HttpFunction
 {
-    public class Function1
+    public class Functions
     {
         private readonly ILogger _logger;
 
-        public Function1(ILoggerFactory loggerFactory)
+        public Functions(ILoggerFactory loggerFactory)
         {
-            _logger = loggerFactory.CreateLogger<Function1>();
+            _logger = loggerFactory.CreateLogger<Functions>();
         }
 
         [Function("Function1")]
