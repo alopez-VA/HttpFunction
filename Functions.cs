@@ -5,13 +5,13 @@ using Microsoft.Extensions.Logging;
 
 namespace HttpFunction
 {
-    public class Function1
+    public class Functions
     {
         private readonly ILogger _logger;
 
-        public Function1(ILoggerFactory loggerFactory)
+        public Functions(ILoggerFactory loggerFactory)
         {
-            _logger = loggerFactory.CreateLogger<Function1>();
+            _logger = loggerFactory.CreateLogger<Functions>();
         }
 
         [Function("Function1")]
@@ -19,10 +19,12 @@ namespace HttpFunction
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
+            var password = "lkajdkjkjejkjz";
+
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Welcome to Azure Functions!");
+            response.WriteString("Welcome to Azure Functions Team!");
 
             return response;
         }
